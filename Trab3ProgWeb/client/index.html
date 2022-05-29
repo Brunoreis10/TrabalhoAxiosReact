@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>P.O.G</title>
+</head>
+
+<body>
+    <header id="header">
+        <img id="logo" src="./images/favicon.png" alt="Logo do POG">
+
+        <h1>Cadastro de Clientes e Produtos</h1>
+    </header>
+
+    <div id="content">
+        <div id="cardClientes">
+            <h2>Cadastro de Clientes</h2>
+            <input id="buttonCreateCliente" type="button" value="Criar Cliente">
+            <input id="buttonGetCliente" type="button" value="Buscar Clientes">
+            <input id="buttonUpdateCliente" type="button" value="Atualizar Cliente">
+            <input id="buttonDeleteCliente" type="button" value="Deletar Cliente">
+        </div>
+
+        <div id="cardProdutos">
+            <h2>Cadastro de Produtos</h2>
+            <input id="buttonCreateProduto" type="button" value="Criar Produto">
+            <input id="buttonGetProduto" type="button" value="Buscar Produtos">
+            <input id="buttonUpdateProduto" type="button" value="Atualizar Produto">
+            <input id="buttonDeleteProduto" type="button" value="Deletar Produto">
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div id="footerPadding">
+            <p>
+                © 2021 P.O.G Corporation. Todos os direitos reservados.
+                Todas as marcas são propriedade dos seus respectivos donos.
+                <br>
+                <a href="#">Política de Privacidade</a> |
+                <a href="#">Termos Legais</a> |
+                <a href="#">Acordo de Assinatura</a> |
+                <a href="#">Reembolsos</a> |
+                <a href="#">Cookies</a>
+            </p>
+            <br>
+            <p>Amanda Miranda Zanella, Bárbara Alessandra Maas, Bruno Henrique Wiedemann Reis e Lucas Miguel Vieira</p>
+        </div>
+    </footer>
+
+    <!-- Create -->
+    <!-- Modal Create Cliente -->
+    <div id="modalCreateCliente"></div>
+    <div id="modalClienteCreate">
+        <div id="modalCard">
+            <h3>Criar um Cliente</h3>
+
+            <input type="text" name="nome" id="inputNomeCliente" placeholder="Digite um nome...">
+            <input type="text" name="cpf" id="inputCpfCliente" placeholder="Digite um CPF...">
+            <input type="email" name="email" id="inputEmailCliente" placeholder="Digite um e-mail...">
+            <input type="tel" name="telefone" id="inputTelefoneCliente" placeholder="Digite um telefone...">
+
+            <div id="buttons">
+                <input type="button" value="Cancelar" id="btnCancelarCreateCliente">
+                <input type="button" value="Criar Cliente" id="btnCriarCliente">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Create Produto -->
+    <div id="modalCreateProduto"></div>
+    <div id="modalProdutoCreate">
+        <div id="modalCard">
+            <h3>Criar um Produto</h3>
+
+            <input type="text" name="descricao" id="inputDescProduto" placeholder="Digite a descrição...">
+            <input type="text" name="valor" id="inputValorProduto" placeholder="Digite o valor...">
+            <input type="date" name="dataLancamento" id="inputDtLancamentoProduto">
+
+            <div id="buttons">
+                <input type="button" value="Cancelar" id="btnCancelarCreateProduto">
+                <input type="button" value="Criar Produto" id="btnCriarProduto">
+            </div>
+        </div>
+    </div>
+
+    <!-- Get -->
+    <!-- Modal Get Cliente -->
+    <div id="modalGetCliente"></div>
+    <div id="modalClienteGet">
+        <div id="cardGetCliente">
+            <div id="mostraGetClientes">
+                <div id="cliente">
+                </div>
+            </div>
+
+            <input type="button" value="Fechar" id="btnFecharGetClientes">
+        </div>
+    </div>
+
+    <!-- Modal Get Produto -->
+    <div id="modalGetProduto"></div>
+    <div id="modalProdutoGet">
+        <div id="cardGetProduto">
+            <div id="mostraGetProdutos">
+                <div id="produto">
+                </div>
+            </div>
+
+            <input type="button" value="Fechar" id="btnFecharGetProdutos">
+        </div>
+    </div>
+
+    <!-- Update -->
+    <!-- Modal Update Cliente -->
+    <div id="modalUpdateClienteId"></div>
+    <div id="modalClienteUpdateId">
+        <div id="modalCard">
+            <h3>Atualizar um Cliente</h3>
+
+            <input type="number" name="descricao" id="inputUpdateCliente" placeholder="Informe o ID do cliente...">
+
+            <div id="buttons">
+                <input type="button" value="Cancelar" id="btnCancelarUpdateClienteId">
+                <input type="button" value="Continuar" id="btnUpdateClienteId">
+            </div>
+        </div>
+    </div>
+    <div id="modalUpdateClienteCreate"></div>
+    <div id="modalClienteUpdateCreate">
+        <div id="modalCard">
+            <h3>Atualizar um Cliente</h3>
+
+            <input type="text" name="nome" id="inputNomeCliente2" placeholder="Digite um nome...">
+            <input type="text" name="cpf" id="inputCpfCliente2" placeholder="Digite um CPF...">
+            <input type="email" name="email" id="inputEmailCliente2" placeholder="Digite um e-mail...">
+            <input type="tel" name="telefone" id="inputTelCliente2" placeholder="Digite um telefone...">
+
+            <div id="buttons">
+                <input type="button" value="Voltar" id="btnCancelarUpdateClienteCreate">
+                <input type="button" value="Atualizar" id="btnUpdateClienteCreate">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Update Produto -->
+    <div id="modalUpdateProdutoId"></div>
+    <div id="modalProdutoUpdateId">
+        <div id="modalCard">
+            <h3>Atualizar um Produto</h3>
+
+            <input type="number" name="descricao" id="inputUpdateProduto" placeholder="Informe o ID do produto...">
+
+            <div id="buttons">
+                <input type="button" value="Cancelar" id="btnCancelarUpdateProdutoId">
+                <input type="button" value="Continuar" id="btnUpdateProdutoId">
+            </div>
+        </div>
+    </div>
+    <div id="modalUpdateProdutoCreate"></div>
+    <div id="modalProdutoUpdateCreate">
+        <div id="modalCard">
+            <h3>Atualizar um Produto</h3>
+
+            <input type="text" name="descricao" id="inputDescProduto2" placeholder="Digite a descrição...">
+            <input type="text" name="valor" id="inputValorProduto2" placeholder="Digite o valor...">
+            <input type="date" name="dataLancamento" id="inputDtLancamentoProduto2">
+
+            <div id="buttons">
+                <input type="button" value="Voltar" id="btnCancelarUpdateProdutoCreate">
+                <input type="button" value="Atualizar" id="btnUpdateProdutoCreate">
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete -->
+    <!-- Modal Delete Cliente -->
+    <div id="modalDeleteCliente"></div>
+    <div id="modalClienteDelete">
+        <div id="modalCard">
+            <h3>Deletar um Cliente</h3>
+
+            <input type="number" name="descricao" id="inputDeleteCliente" placeholder="Informe o ID do cliente...">
+
+            <div id="buttons">
+                <input type="button" value="Cancelar" id="btnCancelarDeleteCliente">
+                <input type="button" value="Deletar Cliente" id="btnDeleteCliente">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete Produto -->
+    <div id="modalDeleteProduto"></div>
+    <div id="modalProdutoDelete">
+        <div id="modalCard">
+            <h3>Deletar um Produto</h3>
+
+            <input type="number" name="descricao" id="inputDeleteProduto" placeholder="Informe o ID do produto...">
+
+            <div id="buttons">
+                <input type="button" value="Cancelar" id="btnCancelarDeleteProduto">
+                <input type="button" value="Deletar Produto" id="btnDeleteProduto">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

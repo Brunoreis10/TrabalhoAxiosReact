@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    color: #242424;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e3e3e3;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    background-color: #242424;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    position: fixed;
+    height: 40px;
+    width: auto;
+    background-color: #e3e3e3;
+    padding: 5px 7px;
+    border-radius: 10px;
+    left: 20px;
+}
+
+h1 {
+    color: #e3e3e3;
+    padding: 25px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h2 {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #242424;
+    color: #e3e3e3;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h3 {
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 203px);
+    left: 0;
+    top: 83;
+    overflow: auto;
+}
+
+#cardClientes {
+    background-color: #bababa;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px;
+    width: 40%;
+    align-items: center;
+    border-radius: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#buttonCreateCliente, #buttonGetCliente, #buttonUpdateCliente, #buttonDeleteCliente {
+    margin: 30px 40px 0;
+    border: none;
+    padding: 10px;
+    background-color: #e3e3e3;
+    color: #242424;
+    font-weight: 500;
+    border-radius: 2px;
+    width: 400px;
+}
+
+#buttonCreateProduto, #buttonGetProduto, #buttonUpdateProduto, #buttonDeleteProduto {
+    margin: 30px 40px 0;
+    border: none;
+    padding: 10px;
+    background-color: #e3e3e3;
+    color: #242424;
+    font-weight: 500;
+    border-radius: 2px;
+    width: 400px;
+}
+
+#cardProdutos {
+    background-color: #bababa;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px;
+    width: 40%;
+    align-items: center;
+    border-radius: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#footer {
+    position: absolute;
+    background-color: #242424;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#footer p, #footer a {
+    color: #e3e3e3;
+}
+
+#footerPadding {
+    padding: 20px;
+}
+
+#modalCreateCliente, #modalCreateProduto,
+#modalDeleteCliente, #modalDeleteProduto,
+#modalUpdateClienteId, #modalUpdateProdutoId,
+#modalUpdateClienteCreate, #modalUpdateProdutoCreate,
+#modalGetCliente, #modalGetProduto {
+    display: none;
+    position: absolute;
+    height: calc(100% - 203px);
+    width: 100%;
+    background-color: #242424;
+    opacity: 50%;
+}
+
+#modalClienteCreate, #modalProdutoCreate,
+#modalClienteDelete, #modalProdutoDelete,
+#modalClienteUpdateId, #modalProdutoUpdateId,
+#modalClienteUpdateCreate, #modalProdutoUpdateCreate,
+#modalClienteGet, #modalProdutoGet {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 203px);
+    justify-content: center;
+    align-items: center;
+}
+
+#modalCard {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 1px;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#cardGetCliente, #cardGetProduto {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #e3e3e3;
+    padding: 10px;
+    width: 400px;
+    height: 450px;
+    border-radius: 1px;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#mostraGetClientes, #mostraGetProdutos {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 420px;
+    overflow: auto;
+}
+
+#cliente, #produto {
+    background-color: #bababa;
+    padding: 15px;
+    margin: 0 0 10px;
+}
+
+#inputNomeCliente, #inputCpfCliente, #inputEmailCliente, #inputTelefoneCliente, #inputDescProduto, #inputValorProduto,
+#inputDtLancamentoProduto, #inputUpdateCliente, #inputNomeCliente2, #inputCpfCliente2, #inputEmailCliente2, #inputTelCliente2,
+#inputUpdateProduto, #inputDescProduto2, #inputValorProduto2, #inputDtLancamentoProduto2, #inputDeleteCliente, #inputDeleteProduto {
+    width: 250px;
+    background-color: #bababa;
+    margin: 25px 30px;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 2px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#btnCriarCliente, #btnCancelarCreateCliente, 
+#btnCriarProduto, #btnCancelarCreateProduto,
+#btnDeleteCliente, #btnCancelarDeleteCliente,
+#btnDeleteProduto, #btnCancelarDeleteProduto,
+#btnUpdateClienteId, #btnCancelarUpdateClienteId,
+#btnUpdateClienteCreate, #btnCancelarUpdateClienteCreate,
+#btnUpdateProdutoId, #btnCancelarUpdateProdutoId,
+#btnUpdateProdutoCreate, #btnCancelarUpdateProdutoCreate,
+#btnFecharGetClientes, #btnFecharGetProdutos {
+    margin: 15px;
+    width: 120px;
+    background-color: #242424;
+    color: #e3e3e3;
+    padding: 10px 0;
+    border: none;
+    border-radius: 2px;
+}
+
+/* Hover Style */
+#footer a:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#button:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#buttonCreateCliente:hover, #buttonGetCliente:hover, #buttonUpdateCliente:hover, #buttonDeleteCliente:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#buttonCreateProduto:hover, 
+#buttonGetProduto:hover, 
+#buttonUpdateProduto:hover, 
+#buttonDeleteProduto:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#logo:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#btnCriarProduto:hover, #btnCriarCliente:hover,
+#btnDeleteProduto:hover, #btnDeleteCliente:hover,
+#btnUpdateProdutoId:hover, #btnUpdateClienteId:hover,
+#btnUpdateProdutoCreate:hover, #btnUpdateClienteCreate:hover,
+#btnFecharGetProdutos:hover, #btnFecharGetClientes:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#btnCancelarCreateProduto:hover, #btnCancelarCreateCliente:hover, 
+#btnCancelarDeleteProduto:hover, #btnCancelarDeleteCliente:hover,
+#btnCancelarUpdateProdutoId:hover, #btnCancelarUpdateClienteId:hover,
+#btnCancelarUpdateProdutoCreate:hover, #btnCancelarUpdateClienteCreate:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+/* Focus */
+#inputNomeCliente:focus, #inputCpfCliente:focus, #inputEmailCliente:focus, #inputTelefoneCliente:focus, #inputDescProduto:focus, #inputValorProduto:focus,
+#inputDtLancamentoProduto:focus, #inputUpdateCliente:focus, #inputNomeCliente2:focus, #inputCpfCliente2:focus, #inputEmailCliente2:focus, #inputTelCliente2:focus,
+#inputUpdateProduto:focus, #inputDescProduto2:focus, #inputValorProduto2:focus, #inputDtLancamentoProduto2:focus, #inputDeleteCliente:focus, #inputDeleteProduto:focus {
+    border: 2px solid #242424;
+    outline: none;
+    padding: 5px 8px;
+    box-shadow: inset 0 0 20px rgba(50, 50, 93, 0.25);
+}
